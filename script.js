@@ -22,3 +22,9 @@ class BookClass {
     }
 };
 
+const LOTR = new BookClass("lotr", "Tolkien");
+console.log(LOTR);
+console.log(LOTR instanceof BookClass);
+console.log(LOTR.__proto__);
+
+LOTR.read();
