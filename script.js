@@ -28,3 +28,21 @@ console.log(LOTR instanceof BookClass);
 console.log(LOTR.__proto__);
 
 LOTR.read();
+
+//====== Setters & Getters ==========================
+
+
+const task = {
+    title: "Task1",
+    dueTo: new Date('2024/01/01'),
+
+    isOverdue(){
+        return this.dueTo < new Date();
+    }
+}
+
+if (!task.isOverdue()){
+    console.log(`Task is not overdue`);
+} else {
+    console.log(`Task is overdue`);
+}
