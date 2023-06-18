@@ -72,6 +72,13 @@ class Task {
     get isOverdue(){
         return this.dueTo < new Date();
     }
+
+    set dueDate(date){
+        if(date < new Date()){
+            return
+        }
+        this._dueDate = date;
+    }
 }
 
 const newTask = new Task("Task2", new Date());
