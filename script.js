@@ -38,6 +38,12 @@ const task = {
 
     get isOverdue(){
         return this.dueTo < new Date();
+    },
+
+    set isOverdue(isOverdueTask){  
+        if(!this.isOverdueTask){
+            this.dueTo = new Date();
+        }
     }
 }
 
@@ -52,3 +58,25 @@ if (!task.isOverdue()){
 */
 
 console.log(task.isOverdue);
+task.isOverdue = true;
+console.log(task);
+
+//===================
+
+class Task {
+    constructor(title, dueDate){
+        this.title = title;
+        this.dueDate = dueDate;
+    }
+
+    get isOverdue(){
+        return this.dueTo < new Date();
+    }
+}
+
+const newTask = new Task("Task2", new Date());
+console.log(newTask.isOverdue);
+
+if(!newTask.isOverdue){
+    console.log(`Task is not overdue`);
+}
