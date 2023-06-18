@@ -124,3 +124,14 @@ test2.hello = function(){
 }
 test2.hello();
 
+//====== Privat ====================
+
+class Car {
+    #vin;
+    speed;
+
+    
+}
+
+const car = new Car();
+console.log(car);
