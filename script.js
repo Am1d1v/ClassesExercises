@@ -87,3 +87,40 @@ console.log(newTask.isOverdue);
 if(!newTask.isOverdue){
     console.log(`Task is not overdue`);
 }
+
+//======= Static ===========================
+
+/*
+
+Number.MAX_SAFE_INTEGER;
+new Number();
+
+Array.from([0,1,2]);
+new Array();
+
+*/
+
+class Test {
+    static a = 1;
+    static hello(){
+        console.log("Hello");
+    }
+
+    static{
+        let b = 5;
+        this.a = 5;
+    }
+}
+
+console.log(Test);
+Test.hello();
+
+const test2 = function(){
+
+};
+
+test2.hello = function(){
+    console.log("Hello");
+}
+test2.hello();
+
