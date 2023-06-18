@@ -36,13 +36,19 @@ const task = {
     title: "Task1",
     dueTo: new Date('2024/01/01'),
 
-    isOverdue(){
+    get isOverdue(){
         return this.dueTo < new Date();
     }
 }
+
+/*
 
 if (!task.isOverdue()){
     console.log(`Task is not overdue`);
 } else {
     console.log(`Task is overdue`);
-}
+} 
+
+*/
+
+console.log(task.isOverdue);
