@@ -130,8 +130,26 @@ class Car {
     #vin;
     speed;
 
-    
+    constructor(){
+        //this.#someThing = 10;
+        this.someFing = 10;
+    }
+
+    #changeVin(){
+        console.log('Changed');
+    }
+
+    test(){
+        this.#changeVin();
+    }
+
+    static #field = 0;
+
+    static {
+        this.#field = 10;
+    }
 }
 
 const car = new Car();
 console.log(car);
+console.log(car.test());
