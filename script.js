@@ -204,3 +204,5 @@ console.log(user.login);
 
 console.log(user.checkPassword("123"));
 console.log(user.checkPassword("223")); //false password
+
+
